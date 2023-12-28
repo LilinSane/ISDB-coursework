@@ -3,10 +3,10 @@ import { useTable} from 'react-table';
 
 
 import './DirectionTable.css';
-import {COLUMNS} from './Columns'
+import {COLUMNS} from './GetColumns'
 
 
-function Table({value}) {
+function GetTable({value}) {
 
   const [data, setData] = useState([]);
 
@@ -55,4 +55,4 @@ function Table({value}) {
   );
 }
 
-export default Table;
+export default GetTable;

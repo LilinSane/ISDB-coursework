@@ -1,9 +1,9 @@
 import React, {useState} from 'react';
 
-import GetTable from './components/Table/DirectionGetTable';
-import GetForm from './components/Form/DirectionGetForm';
-import GenerateTable from './components/Table/DirectionGenerateTable';
-import GenerateForm from './components/Form/DirectionGenerateForm';
+import GetTable from './components/Table/VehiclesGetTable';
+import GetForm from './components/Form/VehiclesGetForm';
+import GenerateTable from './components/Table/VehiclesGenerateTable';
+import GenerateForm from './components/Form/VehiclesGenerateForm';
 
 
 function ClonesPage() {
