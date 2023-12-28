@@ -4,7 +4,7 @@ import axios from 'axios';
 
 import './DirectionForm.css';
 
-const src = "http://localhost:8000/direction";
+const src = "http://localhost:8000/direction-get";
 
 function GetForm({onChange}) {
 
@@ -19,18 +19,19 @@ function GetForm({onChange}) {
    }));
  };
 
+	let buf = [];
+
   const handleOnClick = (event) => {
-   onChange(data);
-   axios
-      .post(src, data)
+   	axios
+      .post(src, data, { headers: { 'Content-Type': 'application/x-www-form-urlencoded' } })
       .then((response) => {
         setResponse(response.data);
-        onChange(response.data);
+        buf = response.data;
+        onChange(buf);
       })
       .catch((error) => {
         console.log(error);
       });
-      
   }
 
   return (

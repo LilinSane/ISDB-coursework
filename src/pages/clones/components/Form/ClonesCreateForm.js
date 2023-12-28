@@ -4,7 +4,7 @@ import axios from 'axios';
 
 import './ClonesForm.css';
 
-const src = "http://localhost:8000";
+const src = "http://localhost:8000/clones-add";
 
 
 function CreateForm() {
@@ -22,7 +22,7 @@ function CreateForm() {
 
   const handleOnClick = (event) => {
    axios
-      .post(src, data)
+      .post(src, data, { headers: { 'Content-Type': 'application/x-www-form-urlencoded' } })
       .then((response) => {
         setResponse(response.data);
         console.log(response.data)

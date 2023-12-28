@@ -21,9 +21,7 @@ function Table({value}) {
     columns,
     data
 });
-  useEffect(() => {
-    setData(value);
-  }, [value])
+  useEffect(() => { setData(value); })
 
   return (
     <>

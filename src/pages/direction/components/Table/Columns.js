@@ -9,10 +9,10 @@ export const COLUMNS = [
     },
     {
       Header: 'Префикс клона',
-      accessor: 'batallion',
+      accessor: 'prefix',
     },
     {
       Header: 'Батальон',
-      accessor: 'rank',
+      accessor: 'batallion',
     },
   ];

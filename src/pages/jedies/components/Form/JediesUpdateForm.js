@@ -4,7 +4,7 @@ import axios from 'axios';
 
 import './JediesForm.css';
 
-const src = "http://localhost:8000/jedies";
+const src = "http://localhost:8000/jedi-upd";
 
 function UpdateForm() {
 
@@ -21,7 +21,7 @@ function UpdateForm() {
 
   const handleOnClick = (event) => {
    axios
-      .post(src, data)
+      .post(src, data, { headers: { 'Content-Type': 'application/x-www-form-urlencoded' } })
       .then((response) => {
         setResponse(response.data);
         console.log(response.data)
@@ -29,7 +29,7 @@ function UpdateForm() {
       .catch((error) => {
         console.log(error);
       });
-      
+
   }
 
   return (
@@ -45,7 +45,7 @@ function UpdateForm() {
           <button type='button' onClick={() => handleOnClick()}>Изменить</button>
     </form>
     </>
-    
+
   );
 }
 

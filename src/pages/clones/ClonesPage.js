@@ -14,8 +14,6 @@ function ClonesPage() {
     setValue(value);
   }
 
-
-
   return (
     <>
     <div>

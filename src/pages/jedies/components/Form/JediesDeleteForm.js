@@ -4,7 +4,7 @@ import axios from 'axios';
 
 import './JediesForm.css';
 
-const src = "http://localhost:8000/jedies";
+const src = "http://localhost:8000/jedi-del";
 
 function DeleteForm() {
 
@@ -22,7 +22,7 @@ function DeleteForm() {
   const handleOnClick = (event) => {
     console.log(data);
    axios
-      .post(src, data)
+      .post(src, data, { headers: { 'Content-Type': 'application/x-www-form-urlencoded' } })
       .then((response) => {
         setResponse(response.data);
         console.log(response.data)
